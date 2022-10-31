@@ -6,31 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="sass\index.css">
     <link rel="shortcut icon" href="/favicon.ico?v=1" type="image/x-icon" />
+    <title>Eye See You</title>
 </head>
 <body>
 
 
     <div class="NavbarContainer">
-
     </div>
-    <div class="BodyContainer">
+    <div class="BodyContainer" id="BodyCon">
+      <script>
+        function DoorSlide() 
+      {       document.getElementById("Ldoor").classList.remove('LeftDoor');
+              document.getElementById("Ldoor").classList.add('LeftDoorActive');
+              document.getElementById("Rdoor").classList.remove('RightDoor');
+              document.getElementById("Rdoor").classList.add('RightDoorActive');
+              var audio2 = new Audio('../img/StoneDragging.mp3');  
+              audio2.play();
+      }
+        function HideButton(){
+          document.getElementById("Dbutton").classList.add('HideEye');
+        }
 
-        <div class="container">
+      </script>
+      <script>
+
+        function TruthEye() {
+
+          document.getElementById("Ldoor").classList.remove('LeftDoorActive');
+          document.getElementById("Ldoor").classList.add('HideEye');
+          document.getElementById("Rdoor").classList.remove('RightDoorActive');
+          document.getElementById("Rdoor").classList.add('HideEye');
+          document.getElementById("Truth").classList.remove('HideEye');
+          document.getElementById("Truth").classList.add('TheTruthActive');
+        }
+        function TruthEyeLoop() {
+          document.getElementById("Truth").classList.remove('TheTruthActive');
+          document.getElementById("Truth").classList.add('HideEye');
+          document.getElementById("TruthLoop").classList.remove('HideEye');
+          document.getElementById("TruthLoop").classList.add('TheTruthActive');
+        }
+
+      </script>
+
+<script type="text/javascript"> 
+
+  function EyeAppear() {
+  
+    document.getElementById("Con").classList.add('Opacity1row');
+    document.getElementById("Con2").classList.add('Opacity1row');
+    document.getElementById("Con3").classList.add('Opacity2row');
+    document.getElementById("Con4").classList.add('Opacity2row');
+    document.getElementById("Con5").classList.add('Opacity3row');
+    document.getElementById("Con6").classList.add('Opacity3row');
+    document.getElementById("BodyCon").classList.add('BB');
+  
+  }
+  
+  
+  </script>
+
+      <script type="text/javascript"> 
+      function DoorSlideTimer(){
+
+        var audio = new Audio('../img/DoorSound.mp3');
+        audio.play();
+        
+        setTimeout(DoorSlide, 5000)
+        setTimeout(HideButton, 5000)
+        document.getElementById("Dbutton").classList.remove('DoorButton');
+        document.getElementById("Dbutton").classList.add('DoorButtonActive');
+        setTimeout(TruthEye, 8000)
+        setTimeout(TruthEyeLoop, 10000)
+        setTimeout(EyeAppear, 11000)
+    
+      }
+      </script>
+
+
+      
+
+      <div class="Door">
+
+        
+        
+        
+
+        <div class="LeftDoor" Id="Ldoor"><button class="DoorButton" id="Dbutton" onclick="DoorSlideTimer()"></button></div>
+        <div class="RightDoor" id="Rdoor"></div>
+
+        <img src="img/TheTruth.gif" alt="TheTruth" class="HideEye" id="Truth">
+        <img src="img/TheTruthLoop.gif" alt="TheTruthLoop" class="HideEye" id="TruthLoop">
+
+      </div>
+
+
+
+
+        <div class="container Hide" id="Con">
             <div class="eyeBall">
               <div class="iris"></div>
             </div>
           </div>
 
-            <div class="container2">
-                <div class="eyeBall2">
-                  <div class="iris2"></div>
-                </div>
-              </div>
+        <div class="container2 Hide" id="Con2">
+            <div class="eyeBall2">
+              <div class="iris2"></div>
+            </div>
+          </div>
 
-                <div class="container3">
-                    <div class="eyeBall3">
-                      <div class="iris3"></div>
-                    </div>
+        <div class="container3 Hide" id="Con3">
+            <div class="eyeBall3">
+              <div class="iris3"></div>
+            </div>
+           </div> 
+
+            <div class="container4 Hide" id="Con4">
+              <div class="eyeBall4">
+                <div class="iris4"></div>
+              </div>
+            </div>
+  
+          <div class="container5 Hide" id="Con5">
+              <div class="eyeBall5">
+                <div class="iris5"></div>
+              </div>
+            </div>
+  
+          <div class="container6 Hide" id="Con6">
+              <div class="eyeBall6">
+                <div class="iris6"></div>
+              </div>     
         </div>
 
 
@@ -39,21 +144,46 @@
             const x = -(window.innerWidth / 2 - event.pageX) / 30;
             const y = -(window.innerHeight / 2 - event.pageY) / 30;
             eye.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                    }); </script>
+                    }); 
+                    
+                    const eye2 = document.querySelector('.iris2');
+            window.addEventListener('mousemove', (event) => {
+            const x = -(window.innerWidth / 2 - event.pageX) / 35;
+            const y = -(window.innerHeight / 2 - event.pageY) / 35;
+            eye2.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
+                    });
 
-                    <script>const eye2 = document.querySelector('.iris2');
-                        window.addEventListener('mousemove', (event) => {
-                        const x = -(window.innerWidth / 2 - event.pageX) / 35;
-                        const y = -(window.innerHeight / 2 - event.pageY) / 35;
-                        eye2.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                                }); </script>
+            const eye3 = document.querySelector('.iris3');
+            window.addEventListener('mousemove', (event) => {
+            const x = -(window.innerWidth / 2 - event.pageX) / 35;
+            const y = -(window.innerHeight / 2 - event.pageY) / 35;
+            eye3.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
+                    });
+                    
+                    const eye4 = document.querySelector('.iris4');
+            window.addEventListener('mousemove', (event) => {
+            const x = -(window.innerWidth / 2 - event.pageX) / 35;
+            const y = -(window.innerHeight / 2 - event.pageY) / 35;
+            eye4.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
+                    });
+                    
+                    const eye5 = document.querySelector('.iris5');
+            window.addEventListener('mousemove', (event) => {
+            const x = -(window.innerWidth / 2 - event.pageX) / 35;
+            const y = -(window.innerHeight / 2 - event.pageY) / 35;
+            eye5.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
+                    });
+          
+                    const eye6 = document.querySelector('.iris6');
+            window.addEventListener('mousemove', (event) => {
+            const x = -(window.innerWidth / 2 - event.pageX) / 35;
+            const y = -(window.innerHeight / 2 - event.pageY) / 35;
+            eye6.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
+                    });         
+                    
+                    </script>
 
-                                     <script>const eye3 = document.querySelector('.iris3    ');
-                                        window.addEventListener('mousemove', (event) => {
-                                        const x = -(window.innerWidth / 2 - event.pageX) / 35;
-                                        const y = -(window.innerHeight / 2 - event.pageY) / 35;
-                                        eye3.style.transform = `rotate(-125deg) translateY(${y}px)  translateX(${x}px)`;         
-                                                }); </script>
+
 
 
        
