@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="sass\index.css">
-    <link rel="shortcut icon" href="/favicon.ico?v=1" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    
     <title>Eye See You</title>
 </head>
 <body>
@@ -13,7 +14,9 @@
 
     <div class="NavbarContainer">
     </div>
-    <div class="BodyContainer" id="BodyCon">
+    <div>
+
+      <div class="BodyContainer" id="BodyCon">
       <script>
         function DoorSlide() 
       {       document.getElementById("Ldoor").classList.remove('LeftDoor');
@@ -48,48 +51,55 @@
 
       </script>
 
-<script type="text/javascript"> 
+      <script type="text/javascript"> 
 
-  function EyeAppear() {
+        function EyeAppear() {
+        
+          document.getElementById("Con").classList.add('Opacity1row');
+          document.getElementById("Con2").classList.add('Opacity1row');
+          document.getElementById("Con3").classList.add('Opacity2row');
+          document.getElementById("Con4").classList.add('Opacity2row');
+          document.getElementById("Con5").classList.add('Opacity3row');
+          document.getElementById("Con6").classList.add('Opacity3row');
+        
+          
+        
+        }
+        function BlackBackground() {
+          document.getElementById("BodyCon").classList.add('BB');
+          var audio3 = new Audio('../img/MonsterBreath.mp3');  
+              audio3.play();
+        }
+        function Message(){
+          document.getElementById("Message").classList.remove('HideEye');
+          document.getElementById("Message").classList.add('Message');
+        }
+        
   
-    document.getElementById("Con").classList.add('Opacity1row');
-    document.getElementById("Con2").classList.add('Opacity1row');
-    document.getElementById("Con3").classList.add('Opacity2row');
-    document.getElementById("Con4").classList.add('Opacity2row');
-    document.getElementById("Con5").classList.add('Opacity3row');
-    document.getElementById("Con6").classList.add('Opacity3row');
-    document.getElementById("BodyCon").classList.add('BB');
-  
-  }
-  
-  
-  </script>
+      </script>
 
       <script type="text/javascript"> 
       function DoorSlideTimer(){
-
         var audio = new Audio('../img/DoorSound.mp3');
         audio.play();
-        
-        setTimeout(DoorSlide, 5000)
-        setTimeout(HideButton, 5000)
+        document.getElementById("Dbutton").disabled = true;
+        setTimeout(DoorSlide, 5000);
+        setTimeout(HideButton, 5000);
         document.getElementById("Dbutton").classList.remove('DoorButton');
         document.getElementById("Dbutton").classList.add('DoorButtonActive');
-        setTimeout(TruthEye, 8000)
-        setTimeout(TruthEyeLoop, 10000)
-        setTimeout(EyeAppear, 11000)
+        document.getElementById("Dbutton").disabled = true;
+        setTimeout(TruthEye, 9000);
+        setTimeout(TruthEyeLoop, 11500);
+        setTimeout(BlackBackground,13000)
+        setTimeout(EyeAppear, 15000);
+        setTimeout(Message, 19000);
     
       }
       </script>
-
-
       
+      <div class="HideEye" id="Message"><p>HAPPY HALLOWEEN! <br><h3>Back to my porfolio</h3></p></div>
 
       <div class="Door">
-
-        
-        
-        
 
         <div class="LeftDoor" Id="Ldoor"><button class="DoorButton" id="Dbutton" onclick="DoorSlideTimer()"></button></div>
         <div class="RightDoor" id="Rdoor"></div>
@@ -137,8 +147,10 @@
                 <div class="iris6"></div>
               </div>     
         </div>
+      </div>
+    </div>
 
-
+    
         <script>const eye = document.querySelector('.iris');
             window.addEventListener('mousemove', (event) => {
             const x = -(window.innerWidth / 2 - event.pageX) / 30;

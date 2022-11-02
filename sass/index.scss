@@ -36,9 +36,16 @@
 }
 /* Pantallas grandes  */
 @media (min-width: 1367px) {
- 
+
+    html{
+      background-color: black;
+    }
+
     .BodyContainer {
-        height: 100vh;
+      filter: brightness(20%);
+      background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('https://s7.orientaltrading.com/is/image/OrientalTrading/70_5617?$PDP_VIEWER_IMAGE$');
+      background-size: 15%;  
+      height: 100vh;
         background-color: rgb(39, 39, 52);
         margin: auto;
         display: grid;
@@ -47,10 +54,64 @@
     }
     .BB{
       background-color: black;
+      background-image: none;
       -webkit-transition: background-color 1000ms linear;
       -ms-transition: background-color 1000ms linear;
       transition: background-color 1000ms linear;
     }
+
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+    .Message{
+
+
+      color: white;
+      font-size: 3em;
+      font-family: 'Creepster', cursive;
+      margin: auto;
+      margin-top: 15%;
+      background-color: transparent;
+      grid-column-start: 4;
+      grid-column: span 2;
+   grid-column-end: 5;
+    grid-row-start: 2;
+   grid-row-end: 2;
+   animation: fadeIn 5s;
+   -webkit-animation: fadeIn 5s;
+   -moz-animation: fadeIn 5s;
+   -o-animation: fadeIn 5s;
+   -ms-animation: fadeIn 5s;
+ 
+ @keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ 
+ @-moz-keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ 
+ @-webkit-keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ 
+ @-o-keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ 
+ @-ms-keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ 
+      h3{
+        text-align:center;
+        margin: auto;
+        font-size: 0.5em;}
+     }
 
     .Door {
       border-top-left-radius: 30%;
@@ -70,12 +131,11 @@
       width: 50%;
       margin-top: 10%;
       margin-left: 25%;
-
      }
     }
 
     .DoorButton {
-      
+      cursor: pointer;
       background: linear-gradient(
         to right,
         rgb(125, 117, 117) 0%,
@@ -84,14 +144,13 @@
         #333 100%
         
       );
-      width: 90px;
-      height: 90px;
+      width: 40%;
+      height: 20%;
       border-radius: 100%;
       border: 0;
       margin-top: 80%;
-      margin-left: 82%;
+      margin-left: 80%;
       position: relative;
-      
     }
 
     .DoorButtonActive {
@@ -103,12 +162,12 @@
         #333 100%
         
       );
-      width: 90px;
-      height: 90px;
+      width: 40%;
+      height: 20%;
       border-radius: 100%;
       border: 0;
       margin-top: 80%;
-      margin-left: 82%;
+      margin-left: 80.2%;
       position: relative;
       transition-duration: 4s;
       rotate: 540deg;
@@ -119,18 +178,14 @@
       height: 100%;
       width: 50%;
       background-color: #333;
-      
-
     }
 
     .RightDoor {
-
       float: right;
       height: 100%;
       width: 50%;
       background-color: rgb(125, 117, 117);
       border: none;
-       
     }
 
     .LeftDoorActive {    
@@ -139,9 +194,7 @@
       width: 50%;
       background-color: #333;
         transition-duration: 6s;
-        transform: translate(-400px);
-      
-
+        transform: translate(-150%);
     }
 
     .RightDoorActive {
@@ -151,7 +204,7 @@
       width: 50%;
       background-color: rgb(125, 117, 117);
       transition-duration: 6s;
-      transform: translate(400px);
+      transform: translate(150%);
        
     }
     .HideEye {
@@ -163,15 +216,15 @@
       
     }
     .Opacity1row {
-      opacity: 1;
+      opacity: 0.6;
       transition: 2s;
     }
     .Opacity2row {
-      opacity: 1;
+      opacity: 0.6;
       transition: 4s;
     }
     .Opacity3row {
-      opacity: 1;
+      opacity: 0.6;
       transition: 6s;
     }
     
@@ -417,9 +470,9 @@
       .container5 {
         position: relative;
         cursor: pointer;
-        margin-left: 10%;
-        grid-column-start: 1;
-        grid-column-end: 1;
+        margin-right: 20%;
+        grid-column-start: 2;
+        grid-column-end: 2;
          grid-row-start: 5;
         grid-row-end: 5;
       }
@@ -476,9 +529,9 @@
       .container6 {
         position: relative;
         cursor: pointer;
-        margin-left: 10%;
-        grid-column-start: 6;
-        grid-column-end: 6;
+        margin-left: 30%;
+        grid-column-start: 5;
+        grid-column-end: 5;
          grid-row-start: 5;
         grid-row-end: 5;
       }
@@ -530,6 +583,5 @@
         z-index:1;
         overflow: hidden;
       }
-
   }
 
