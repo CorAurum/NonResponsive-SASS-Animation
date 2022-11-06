@@ -1,56 +1,21 @@
 
-
-/* Mobiles */
-@media (min-width: 320px) and (max-width: 480px) {
-
-    .BodyContainer {
-        height: 100vh;
-        background-color: blue;
-        margin: auto;
-        
-    }
-
-}
-    
-
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
- 
-    * { background-color: orange;
-    }
-
-  }
-/* Pantallas pequeñas  */  
-@media (min-width: 769px) and (max-width: 1024px) {
- 
-    * { background-color: yellow;
-    }
-
-  }
- /* Pantallas medianas  */ 
-  @media (min-width: 1025px) and (max-width: 1366px) {
- 
-    * { background-color: burlywood;
-    }
-
-}
-/* Pantallas grandes  */
-@media (min-width: 1367px) {
-
     html{
       background-color: black;
     }
 
     .BodyContainer {
-      filter: brightness(20%);
-      background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('https://s7.orientaltrading.com/is/image/OrientalTrading/70_5617?$PDP_VIEWER_IMAGE$');
-      background-size: 15%;  
-      height: 100vh;
+      filter: brightness(30%);
+      background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../img/BackgroundStone.jfif');
+            background-size: 15%;  
+      height: 68em;
+      min-height: 68em;
+      width: 100%;
+      min-width: 100%;
         background-color: rgb(39, 39, 52);
         margin: auto;
         display: grid;
-        grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
-        grid-template-rows: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+        grid-template-columns: 320px 320px 320px 320px 320px 320px;
+        grid-template-rows: 180px 180px 180px 180px 180px 180px;
     }
     .BB{
       background-color: black;
@@ -63,7 +28,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
     .Message{
-
 
       color: white;
       font-size: 3em;
@@ -583,5 +547,3 @@
         z-index:1;
         overflow: hidden;
       }
-  }
-

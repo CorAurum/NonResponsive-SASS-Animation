@@ -11,73 +11,16 @@
 </head>
 <body>
 
-
     <div class="NavbarContainer">
     </div>
     <div>
 
       <div class="BodyContainer" id="BodyCon">
-      <script>
-        function DoorSlide() 
-      {       document.getElementById("Ldoor").classList.remove('LeftDoor');
-              document.getElementById("Ldoor").classList.add('LeftDoorActive');
-              document.getElementById("Rdoor").classList.remove('RightDoor');
-              document.getElementById("Rdoor").classList.add('RightDoorActive');
-              var audio2 = new Audio('../img/StoneDragging.mp3');  
-              audio2.play();
-      }
-        function HideButton(){
-          document.getElementById("Dbutton").classList.add('HideEye');
-        }
 
-      </script>
-      <script>
+        <script type = "text/javascript" src="js/Door.js"></script>  
+        <script type = "text/javascript" src="js/Eyes.js"></script>  
 
-        function TruthEye() {
-
-          document.getElementById("Ldoor").classList.remove('LeftDoorActive');
-          document.getElementById("Ldoor").classList.add('HideEye');
-          document.getElementById("Rdoor").classList.remove('RightDoorActive');
-          document.getElementById("Rdoor").classList.add('HideEye');
-          document.getElementById("Truth").classList.remove('HideEye');
-          document.getElementById("Truth").classList.add('TheTruthActive');
-        }
-        function TruthEyeLoop() {
-          document.getElementById("Truth").classList.remove('TheTruthActive');
-          document.getElementById("Truth").classList.add('HideEye');
-          document.getElementById("TruthLoop").classList.remove('HideEye');
-          document.getElementById("TruthLoop").classList.add('TheTruthActive');
-        }
-
-      </script>
-
-      <script type="text/javascript"> 
-
-        function EyeAppear() {
-        
-          document.getElementById("Con").classList.add('Opacity1row');
-          document.getElementById("Con2").classList.add('Opacity1row');
-          document.getElementById("Con3").classList.add('Opacity2row');
-          document.getElementById("Con4").classList.add('Opacity2row');
-          document.getElementById("Con5").classList.add('Opacity3row');
-          document.getElementById("Con6").classList.add('Opacity3row');
-        
-          
-        
-        }
-        function BlackBackground() {
-          document.getElementById("BodyCon").classList.add('BB');
-          var audio3 = new Audio('../img/MonsterBreath.mp3');  
-              audio3.play();
-        }
-        function Message(){
-          document.getElementById("Message").classList.remove('HideEye');
-          document.getElementById("Message").classList.add('Message');
-        }
-        
-  
-      </script>
-
+        <!-- Este script se encarga de programar el tiempo de ejecucion de cada evento del proyecto-->
       <script type="text/javascript"> 
       function DoorSlideTimer(){
         var audio = new Audio('../img/DoorSound.mp3');
@@ -93,24 +36,18 @@
         setTimeout(BlackBackground,13000)
         setTimeout(EyeAppear, 15000);
         setTimeout(Message, 19000);
-    
       }
       </script>
+
+       <!---------------------------------------------------------------------------------------------------------->
       
       <div class="HideEye" id="Message"><p>HAPPY HALLOWEEN! <br><h3>Back to my porfolio</h3></p></div>
-
       <div class="Door">
-
         <div class="LeftDoor" Id="Ldoor"><button class="DoorButton" id="Dbutton" onclick="DoorSlideTimer()"></button></div>
         <div class="RightDoor" id="Rdoor"></div>
-
         <img src="img/TheTruth.gif" alt="TheTruth" class="HideEye" id="Truth">
         <img src="img/TheTruthLoop.gif" alt="TheTruthLoop" class="HideEye" id="TruthLoop">
-
       </div>
-
-
-
 
         <div class="container Hide" id="Con">
             <div class="eyeBall">
@@ -150,56 +87,6 @@
       </div>
     </div>
 
-    
-        <script>const eye = document.querySelector('.iris');
-            window.addEventListener('mousemove', (event) => {
-            const x = -(window.innerWidth / 2 - event.pageX) / 30;
-            const y = -(window.innerHeight / 2 - event.pageY) / 30;
-            eye.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                    }); 
-                    
-                    const eye2 = document.querySelector('.iris2');
-            window.addEventListener('mousemove', (event) => {
-            const x = -(window.innerWidth / 2 - event.pageX) / 35;
-            const y = -(window.innerHeight / 2 - event.pageY) / 35;
-            eye2.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                    });
-
-            const eye3 = document.querySelector('.iris3');
-            window.addEventListener('mousemove', (event) => {
-            const x = -(window.innerWidth / 2 - event.pageX) / 35;
-            const y = -(window.innerHeight / 2 - event.pageY) / 35;
-            eye3.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                    });
-                    
-                    const eye4 = document.querySelector('.iris4');
-            window.addEventListener('mousemove', (event) => {
-            const x = -(window.innerWidth / 2 - event.pageX) / 35;
-            const y = -(window.innerHeight / 2 - event.pageY) / 35;
-            eye4.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                    });
-                    
-                    const eye5 = document.querySelector('.iris5');
-            window.addEventListener('mousemove', (event) => {
-            const x = -(window.innerWidth / 2 - event.pageX) / 35;
-            const y = -(window.innerHeight / 2 - event.pageY) / 35;
-            eye5.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                    });
-          
-                    const eye6 = document.querySelector('.iris6');
-            window.addEventListener('mousemove', (event) => {
-            const x = -(window.innerWidth / 2 - event.pageX) / 35;
-            const y = -(window.innerHeight / 2 - event.pageY) / 35;
-            eye6.style.transform = `rotate(-134deg) translateY(${y}px)  translateX(${x}px)`;         
-                    });         
-                    
-                    </script>
-
-
-
-
-       
-      
 
 <footer>
     <div class="FooterContainer">
